@@ -47,7 +47,7 @@ export const Route = createFileRoute("/leistungen/$slug")({
 });
 
 function ServiceDetailPage() {
-  const { service } = Route.useLoaderData();
+  const { service } = Route.useLoaderData() as { service: Service };
   const Icon = serviceIcons[service.icon];
   const related = service.related
     .map((slug) => services.find((s) => s.slug === slug))
