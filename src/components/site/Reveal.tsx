@@ -13,10 +13,15 @@ export function Reveal({
   className?: string;
   as?: "div" | "section" | "li" | "article";
 }) {
-  const { ref, visible } = useReveal<HTMLDivElement>(delay);
+  const { ref, visible } = useReveal<HTMLElement>(delay);
+  const Component = Tag as React.ElementType;
   return (
-    <Tag ref={ref} data-visible={visible} className={cn("reveal", className)}>
+    <Component
+      ref={ref as React.Ref<HTMLElement>}
+      data-visible={visible}
+      className={cn("reveal", className)}
+    >
       {children}
-    </Tag>
+    </Component>
   );
 }
