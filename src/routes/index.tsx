@@ -115,13 +115,13 @@ function HomePage() {
 
             <a
               href={company.phoneHref}
-              className="mt-7 inline-flex items-center gap-3 text-lg font-semibold text-primary hover:text-accent"
+              className="mt-7 inline-flex flex-wrap items-center gap-x-3 gap-y-1 text-lg font-semibold text-primary hover:text-accent"
             >
               <span className="flex size-11 items-center justify-center rounded-full bg-accent-soft text-accent">
                 <Phone className="size-5" aria-hidden="true" />
               </span>
-              {company.phone}
-              <span className="text-sm font-normal text-muted-foreground">
+              <span className="whitespace-nowrap">{company.phone}</span>
+              <span className="text-sm font-normal whitespace-nowrap text-muted-foreground">
                 {company.officeHoursShort}
               </span>
             </a>
