@@ -168,7 +168,7 @@ export function ContactForm() {
           >
             {languages.map((l) => (
               <option key={l.code} value={l.label}>
-                {l.label} – {l.native}
+                {l.label === l.native ? l.label : `${l.label} – ${l.native}`}
               </option>
             ))}
           </select>
