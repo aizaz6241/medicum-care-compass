@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowRight, Check, Phone } from "lucide-react";
-import { serviceBySlug, services } from "@/data/services";
+import { serviceBySlug, services, type Service } from "@/data/services";
 import { company } from "@/data/company";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { Reveal } from "@/components/site/Reveal";
@@ -11,7 +11,7 @@ import { buildHead, breadcrumbSchema, faqSchema, jsonLd, serviceSchema } from "@
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/leistungen/$slug")({
-  loader: ({ params }) => {
+  loader: ({ params }): { service: Service } => {
     const service = serviceBySlug(params.slug);
     if (!service) throw notFound();
     return { service };
