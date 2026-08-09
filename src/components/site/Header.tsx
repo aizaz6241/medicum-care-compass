@@ -8,13 +8,18 @@ import { services } from "@/data/services";
 import { serviceIcons } from "./service-icons";
 import { cn } from "@/lib/utils";
 
-const mainNav = [
+const mainNav: {
+  label: string;
+  to: "/" | "/ueber-uns" | "/leistungen" | "/leistungen/pflegeberatung" | "/kontakt";
+  hasMenu?: boolean;
+}[] = [
   { label: "Startseite", to: "/" },
   { label: "Über uns", to: "/ueber-uns" },
   { label: "Leistungen", to: "/leistungen", hasMenu: true },
   { label: "Pflegeberatung", to: "/leistungen/pflegeberatung" },
   { label: "Kontakt", to: "/kontakt" },
-] as const;
+];
+
 
 const linkClass =
   "relative inline-flex min-h-11 items-center rounded-md px-3 text-[0.95rem] font-medium text-foreground transition-colors hover:text-accent data-[status=active]:text-primary data-[status=active]:font-semibold";
