@@ -22,7 +22,8 @@ const mainNav: {
 
 
 const linkClass =
-  "relative inline-flex min-h-11 items-center whitespace-nowrap rounded-md px-2.5 xl:px-3 text-[0.95rem] font-medium text-foreground transition-colors hover:text-accent data-[status=active]:text-primary data-[status=active]:font-semibold";
+  "link-underline relative inline-flex min-h-11 items-center whitespace-nowrap rounded-md px-2.5 xl:px-3 text-[0.95rem] font-medium text-foreground transition-colors duration-300 hover:text-accent data-[status=active]:text-primary data-[status=active]:font-semibold";
+
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
