@@ -96,7 +96,7 @@ function KontaktPage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href={company.phoneHref}
-                  className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-primary px-6 font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+                  className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-primary px-6 font-semibold text-primary-foreground btn-sheen shadow-soft"
                 >
                   <Phone className="size-4" aria-hidden="true" />
                   Jetzt anrufen
@@ -151,7 +151,7 @@ function KontaktPage() {
               href={directionsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-12 items-center gap-2 rounded-full bg-primary px-6 font-semibold text-primary-foreground"
+              className="inline-flex min-h-12 items-center gap-2 rounded-full bg-primary px-6 font-semibold text-primary-foreground btn-sheen shadow-soft"
             >
               <Navigation className="size-4" aria-hidden="true" />
               Route planen

@@ -127,7 +127,7 @@ export function Header() {
           <LanguageSwitcher />
           <Link
             to="/kontakt"
-            className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/92 hover:shadow-lift"
+            className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-soft btn-sheen"
           >
             Pflegeberatung anfragen
           </Link>
@@ -216,7 +216,7 @@ export function Header() {
               <Link
                 to="/kontakt"
                 onClick={() => setMobileOpen(false)}
-                className="flex min-h-12 items-center justify-center rounded-full bg-primary px-6 font-semibold text-primary-foreground"
+                className="flex min-h-12 items-center justify-center rounded-full bg-primary px-6 font-semibold text-primary-foreground btn-sheen shadow-soft"
               >
                 Pflegeberatung anfragen
               </Link>

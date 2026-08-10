@@ -102,7 +102,7 @@ function HomePage() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
                 to="/kontakt"
-                className="inline-flex min-h-13 items-center justify-center rounded-full bg-primary px-8 py-3.5 font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lift"
+                className="inline-flex min-h-13 items-center justify-center rounded-full bg-primary px-8 py-3.5 font-semibold text-primary-foreground shadow-soft btn-sheen"
               >
                 Pflegeberatung anfragen
               </Link>
