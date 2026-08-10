@@ -82,17 +82,22 @@ function HomePage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-surface">
-        <div className="container-page grid gap-12 py-14 md:py-20 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-16">
-          <div>
+        <div
+          aria-hidden="true"
+          className="float-slow pointer-events-none absolute -top-40 -right-32 size-[34rem] rounded-full bg-accent-soft opacity-70 blur-3xl"
+        />
+        <div className="container-page relative grid gap-12 py-14 md:py-20 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-16">
+          <div className="animate-fade-in">
             <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-primary shadow-soft">
-              <span className="size-2 rounded-full bg-accent" aria-hidden="true" />
+              <span className="size-2 animate-pulse rounded-full bg-accent" aria-hidden="true" />
               Ambulanter Pflegedienst in {company.city}
             </p>
             <h1 className="mt-6 text-4xl leading-[1.08] font-extrabold sm:text-5xl lg:text-6xl">
               Professionelle Pflege.
               <br />
-              Menschlich. Individuell.
+              <span className="text-gradient-brand">Menschlich. Individuell.</span>
             </h1>
+
             <p className="mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
               Medicum unterstützt Menschen in {company.serviceAreaLabel} mit individueller Pflege,
               medizinischer Behandlungspflege und zuverlässiger Unterstützung im Alltag – zu Hause,
