@@ -90,7 +90,7 @@ function ServiceDetailPage() {
               <div className="mt-6 space-y-3">
                 <Link
                   to="/kontakt"
-                  className="flex min-h-12 items-center justify-center rounded-full bg-primary px-6 font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+                  className="flex min-h-12 items-center justify-center rounded-full bg-primary px-6 font-semibold text-primary-foreground btn-sheen shadow-soft"
                 >
                   {service.ctaLabel}
                 </Link>

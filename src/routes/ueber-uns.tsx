@@ -168,7 +168,7 @@ function UeberUnsPage() {
               </p>
               <Link
                 to="/kontakt"
-                className="mt-6 inline-flex min-h-12 items-center rounded-full bg-primary px-6 font-semibold text-primary-foreground"
+                className="mt-6 inline-flex min-h-12 items-center rounded-full bg-primary px-6 font-semibold text-primary-foreground btn-sheen shadow-soft"
               >
                 Kontakt aufnehmen
               </Link>

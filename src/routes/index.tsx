@@ -6,6 +6,8 @@ import { company } from "@/data/company";
 import { services, featuredServiceSlugs, serviceBySlug, type Faq } from "@/data/services";
 import { ServiceCard } from "@/components/site/ServiceCard";
 import { Reveal } from "@/components/site/Reveal";
+import { Parallax3D } from "@/components/site/Parallax3D";
+
 import { CtaBand } from "@/components/site/CtaBand";
 import { FaqSection } from "@/components/site/FaqSection";
 import { LanguagesSection } from "@/components/site/LanguagesSection";
@@ -80,17 +82,22 @@ function HomePage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-surface">
-        <div className="container-page grid gap-12 py-14 md:py-20 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-16">
-          <div>
+        <div
+          aria-hidden="true"
+          className="float-slow pointer-events-none absolute -top-40 -right-32 size-[34rem] rounded-full bg-accent-soft opacity-70 blur-3xl"
+        />
+        <div className="container-page relative grid gap-12 py-14 md:py-20 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-16">
+          <div className="animate-fade-in">
             <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-primary shadow-soft">
-              <span className="size-2 rounded-full bg-accent" aria-hidden="true" />
+              <span className="size-2 animate-pulse rounded-full bg-accent" aria-hidden="true" />
               Ambulanter Pflegedienst in {company.city}
             </p>
             <h1 className="mt-6 text-4xl leading-[1.08] font-extrabold sm:text-5xl lg:text-6xl">
               Professionelle Pflege.
               <br />
-              Menschlich. Individuell.
+              <span className="text-gradient-brand">Menschlich. Individuell.</span>
             </h1>
+
             <p className="mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
               Medicum unterstützt Menschen in {company.serviceAreaLabel} mit individueller Pflege,
               medizinischer Behandlungspflege und zuverlässiger Unterstützung im Alltag – zu Hause,
@@ -100,7 +107,7 @@ function HomePage() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
                 to="/kontakt"
-                className="inline-flex min-h-13 items-center justify-center rounded-full bg-primary px-8 py-3.5 font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lift"
+                className="inline-flex min-h-13 items-center justify-center rounded-full bg-primary px-8 py-3.5 font-semibold text-primary-foreground shadow-soft btn-sheen"
               >
                 Pflegeberatung anfragen
               </Link>
@@ -127,25 +134,28 @@ function HomePage() {
             </a>
           </div>
 
-          <div className="relative">
-            <div className="overflow-hidden rounded-3xl shadow-lift">
-              <img
-                src={heroImage}
-                width={1600}
-                height={1200}
-                fetchPriority="high"
-                decoding="async"
-                alt="Pflegefachkraft von Medicum im Gespräch mit einer älteren Frau in deren Wohnzimmer in Hanau"
-                className="h-full w-full object-cover"
-              />
+          <Parallax3D className="relative" strength={7} depth={14}>
+            <div className="relative">
+              <div className="overflow-hidden rounded-3xl shadow-lift">
+                <img
+                  src={heroImage}
+                  width={1600}
+                  height={1200}
+                  fetchPriority="high"
+                  decoding="async"
+                  alt="Pflegefachkraft von Medicum im Gespräch mit einer älteren Frau in deren Wohnzimmer in Hanau"
+                  className="h-full w-full scale-105 object-cover transition-transform duration-700 ease-out"
+                />
+              </div>
+              <div className="mt-4 rounded-2xl border border-border bg-card p-5 shadow-soft sm:absolute sm:-bottom-8 sm:-left-6 sm:mt-0 sm:max-w-xs">
+                <p className="font-display font-bold text-primary">Wir kümmern uns.</p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Pflege, die sich an Ihrem Alltag orientiert – nicht umgekehrt.
+                </p>
+              </div>
             </div>
-            <div className="mt-4 rounded-2xl border border-border bg-card p-5 shadow-soft sm:absolute sm:-bottom-8 sm:-left-6 sm:mt-0 sm:max-w-xs">
-              <p className="font-display font-bold text-primary">Wir kümmern uns.</p>
-              <p className="mt-1 text-sm text-muted-foreground">
-                Pflege, die sich an Ihrem Alltag orientiert – nicht umgekehrt.
-              </p>
-            </div>
-          </div>
+          </Parallax3D>
+
         </div>
 
         {/* Vertrauensleiste */}

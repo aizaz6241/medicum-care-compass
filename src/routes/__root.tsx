@@ -104,7 +104,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Medicum ist ein ambulanter Pflegedienst in Hanau: Behandlungspflege, Grundpflege, Betreuung und Pflegeberatung – menschlich, individuell und mehrsprachig.",
       },
       { name: "author", content: "Medicum" },
-      { name: "theme-color", content: "#1e3a5f" },
+      { name: "theme-color", content: "#07B190" },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Medicum – Ambulanter Pflegedienst in Hanau" },
       { property: "og:locale", content: "de_DE" },

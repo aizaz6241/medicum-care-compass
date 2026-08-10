@@ -10,19 +10,22 @@ import { cn } from "@/lib/utils";
 
 const mainNav: {
   label: string;
-  to: "/" | "/ueber-uns" | "/leistungen" | "/leistungen/pflegeberatung" | "/kontakt";
+  to: "/" | "/ueber-uns" | "/leistungen" | "/leistungen/$slug" | "/kontakt";
+  params?: { slug: string };
   hasMenu?: boolean;
 }[] = [
   { label: "Startseite", to: "/" },
   { label: "Über uns", to: "/ueber-uns" },
   { label: "Leistungen", to: "/leistungen", hasMenu: true },
-  { label: "Pflegeberatung", to: "/leistungen/pflegeberatung" },
+  { label: "Pflegeberatung", to: "/leistungen/$slug", params: { slug: "pflegeberatung" } },
   { label: "Kontakt", to: "/kontakt" },
 ];
 
 
+
 const linkClass =
-  "relative inline-flex min-h-11 items-center whitespace-nowrap rounded-md px-2.5 xl:px-3 text-[0.95rem] font-medium text-foreground transition-colors hover:text-accent data-[status=active]:text-primary data-[status=active]:font-semibold";
+  "link-underline relative inline-flex min-h-11 items-center whitespace-nowrap rounded-md px-2.5 xl:px-3 text-[0.95rem] font-medium text-foreground transition-colors duration-300 hover:text-accent data-[status=active]:text-primary data-[status=active]:font-semibold";
+
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -59,7 +62,7 @@ export function Header() {
           {mainNav.map((item) =>
             item.hasMenu ? (
               <div
-                key={item.to}
+                key={item.label}
                 className="relative"
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
@@ -112,8 +115,9 @@ export function Header() {
               </div>
             ) : (
               <Link
-                key={item.to}
+                key={item.label}
                 to={item.to}
+                params={item.params as never}
                 className={linkClass}
                 activeOptions={{ exact: item.to === "/" }}
               >
@@ -127,7 +131,7 @@ export function Header() {
           <LanguageSwitcher />
           <Link
             to="/kontakt"
-            className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/92 hover:shadow-lift"
+            className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-soft btn-sheen"
           >
             Pflegeberatung anfragen
           </Link>
@@ -168,9 +172,10 @@ export function Header() {
               {mainNav
                 .filter((i) => !i.hasMenu)
                 .map((item) => (
-                  <li key={item.to}>
+                  <li key={item.label}>
                     <Link
                       to={item.to}
+                      params={item.params as never}
                       onClick={() => setMobileOpen(false)}
                       activeOptions={{ exact: item.to === "/" }}
                       className="flex min-h-12 items-center rounded-xl px-3 text-lg font-medium text-foreground data-[status=active]:bg-primary-soft data-[status=active]:text-primary"
@@ -216,7 +221,7 @@ export function Header() {
               <Link
                 to="/kontakt"
                 onClick={() => setMobileOpen(false)}
-                className="flex min-h-12 items-center justify-center rounded-full bg-primary px-6 font-semibold text-primary-foreground"
+                className="flex min-h-12 items-center justify-center rounded-full bg-primary px-6 font-semibold text-primary-foreground btn-sheen shadow-soft"
               >
                 Pflegeberatung anfragen
               </Link>

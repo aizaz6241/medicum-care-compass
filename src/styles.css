@@ -53,41 +53,47 @@
 :root {
   --radius: 0.75rem;
 
-  /* warm off-white background */
-  --background: oklch(0.988 0.005 95);
-  --foreground: oklch(0.24 0.018 250);
+  /* clean white base */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.26 0.015 220);
 
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.24 0.018 250);
+  --card-foreground: oklch(0.26 0.015 220);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.24 0.018 250);
+  --popover-foreground: oklch(0.26 0.015 220);
 
-  /* deep medical navy */
-  --primary: oklch(0.36 0.072 247);
-  --primary-foreground: oklch(0.985 0.004 250);
-  --primary-soft: oklch(0.94 0.018 245);
+  /* MEDICUM brand teal #07B190 */
+  --primary: oklch(0.672 0.1265 174.5);
+  --primary-foreground: oklch(1 0 0);
+  --primary-soft: oklch(0.955 0.032 174.5);
 
-  --secondary: oklch(0.956 0.011 210);
-  --secondary-foreground: oklch(0.3 0.04 247);
+  --secondary: oklch(0.967 0.012 190);
+  --secondary-foreground: oklch(0.34 0.055 190);
 
-  --muted: oklch(0.962 0.008 190);
-  --muted-foreground: oklch(0.47 0.02 248);
+  --muted: oklch(0.968 0.008 190);
+  --muted-foreground: oklch(0.5 0.018 215);
 
-  /* calm healthcare teal */
-  --accent: oklch(0.56 0.075 190);
-  --accent-foreground: oklch(0.99 0.004 190);
-  --accent-soft: oklch(0.945 0.024 190);
+  --accent: oklch(0.672 0.1265 174.5);
+  --accent-foreground: oklch(1 0 0);
+  --accent-soft: oklch(0.955 0.032 174.5);
 
   --destructive: oklch(0.52 0.18 27);
   --destructive-foreground: oklch(0.985 0.004 250);
 
-  --border: oklch(0.912 0.009 240);
-  --input: oklch(0.9 0.01 240);
-  --ring: oklch(0.56 0.075 190);
+  --border: oklch(0.918 0.008 200);
+  --input: oklch(0.9 0.01 200);
+  --ring: oklch(0.672 0.1265 174.5);
 
-  --surface: oklch(0.972 0.009 95);
-  --surface-foreground: oklch(0.24 0.018 250);
+  --surface: oklch(0.984 0.008 180);
+  --surface-foreground: oklch(0.26 0.015 220);
+
+  --gradient-brand: linear-gradient(
+    135deg,
+    oklch(0.672 0.1265 174.5),
+    oklch(0.76 0.115 178)
+  );
 }
+
 
 @layer base {
   * {
@@ -116,8 +122,9 @@
     font-family: var(--font-display);
     letter-spacing: -0.02em;
     text-wrap: balance;
-    color: var(--color-primary);
+    color: var(--color-foreground);
   }
+
 
   p {
     text-wrap: pretty;
@@ -194,6 +201,89 @@
     top: 1rem;
   }
 }
+
+@utility brand-gradient {
+  background-image: var(--gradient-brand);
+}
+
+@utility text-gradient-brand {
+  background-image: var(--gradient-brand);
+  background-clip: text;
+  color: transparent;
+}
+
+/* glänzender Hover-Effekt für primäre Buttons */
+@utility btn-sheen {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transform: translateX(-120%) skewX(-18deg);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in oklab, white 42%, transparent),
+      transparent
+    );
+    transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+  }
+
+  &:hover::after {
+    transform: translateX(120%) skewX(-18deg);
+  }
+}
+
+/* animierter Unterstrich für Textlinks */
+@utility link-underline {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    background: var(--color-accent);
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@utility float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 
 @media (prefers-reduced-motion: reduce) {
   html {

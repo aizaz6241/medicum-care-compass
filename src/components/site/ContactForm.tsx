@@ -234,7 +234,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-8 font-semibold text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lift disabled:pointer-events-none disabled:opacity-70"
+          className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-8 font-semibold text-primary-foreground btn-sheen shadow-soft disabled:pointer-events-none disabled:opacity-70"
         >
           {isSubmitting && <Loader2 className="size-4 animate-spin" aria-hidden="true" />}
           {isSubmitting ? "Wird gesendet …" : "Anfrage senden"}
