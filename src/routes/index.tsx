@@ -6,6 +6,8 @@ import { company } from "@/data/company";
 import { services, featuredServiceSlugs, serviceBySlug, type Faq } from "@/data/services";
 import { ServiceCard } from "@/components/site/ServiceCard";
 import { Reveal } from "@/components/site/Reveal";
+import { Parallax3D } from "@/components/site/Parallax3D";
+
 import { CtaBand } from "@/components/site/CtaBand";
 import { FaqSection } from "@/components/site/FaqSection";
 import { LanguagesSection } from "@/components/site/LanguagesSection";
