@@ -122,8 +122,9 @@
     font-family: var(--font-display);
     letter-spacing: -0.02em;
     text-wrap: balance;
-    color: var(--color-primary);
+    color: var(--color-foreground);
   }
+
 
   p {
     text-wrap: pretty;
