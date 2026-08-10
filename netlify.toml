@@ -2,6 +2,10 @@
   command = "npm run build"
   publish = ".output/public"
 
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--legacy-peer-deps"
+
 # Nitro will detect Netlify environment and build the SSR functions into .netlify/functions-internal
 # If for some reason the output is just a static site (SPA mode), it will build into dist.
 # For TanStack Start, the publish folder is typically .output/public (default Nitro output for static assets)
