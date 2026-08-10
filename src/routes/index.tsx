@@ -48,9 +48,9 @@ const homeFaqs: Faq[] = [
 export const Route = createFileRoute("/")({
   head: () => ({
     ...buildHead({
-      title: "Ambulanter Pflegedienst in Hanau | Medicum",
+      title: "Medicum – Ambulanter Pflegedienst in Hanau & Umgebung",
       description:
-        "Medicum ist Ihr ambulanter Pflegedienst in Hanau: Behandlungspflege, Grundpflege, Haushaltshilfe, Betreuung und Pflegeberatung – menschlich, individuell und mehrsprachig.",
+        "Medicum ist Ihr professioneller ambulanter Pflegedienst in Hanau. Wir bieten zuverlässige Behandlungspflege, Grundpflege, Haushaltshilfe und Pflegeberatung.",
       path: "/",
     }),
     scripts: [jsonLd(faqSchema(homeFaqs))],

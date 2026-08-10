@@ -401,25 +401,46 @@ export const services: Service[] = [
     slug: "pflegeberatung",
     title: "Pflegeberatung",
     teaser:
-      "Orientierung im Pflegealltag: Kostenübernahme, Hilfsmittel, Wohnraumanpassung und Unterstützung beim Pflegegrad.",
+      "Orientierung im Pflegealltag: Kostenübernahme nach SGB XI, Pflegegrad beantragen, § 37.3 Beratungseinsatz, § 45b Entlastungsbetrag und Hilfsmittel.",
     icon: "messageCircle",
-    metaTitle: "Pflegeberatung in Hanau | Medicum Pflegedienst",
+    metaTitle: "Pflegeberatung in Hanau | § 37.3 SGB XI | Medicum Pflegedienst",
     metaDescription:
-      "Pflegeberatung in Hanau: Wir erklären Kostenübernahmen, Hilfsmittel, Wohnraumanpassung, Medikamentenmanagement und unterstützen bei der Beantragung eines Pflegegrades.",
+      "Pflegeberatung nach § 37 Abs. 3 SGB XI in Hanau: Medicum berät zu Pflegegraden (1–5), Entlastungsbetrag (§ 45b SGB XI, 125 €/Monat), Kostenübernahme und Hilfsmitteln – persönlich und mehrsprachig.",
     intro: [
-      "Wenn Pflege plötzlich zum Thema wird, stellen sich viele Fragen auf einmal: Wer zahlt was? Welche Hilfsmittel gibt es? Wie beantragt man einen Pflegegrad? Und was ist eigentlich der nächste Schritt?",
-      "In unserer Pflegeberatung sortieren wir diese Fragen gemeinsam mit Ihnen – verständlich, in Ruhe und ohne Fachchinesisch.",
+      "Wenn Pflege plötzlich zum Thema wird, stellen sich viele Fragen auf einmal: Wer zahlt was? Welche Hilfsmittel gibt es? Wie beantragt man einen Pflegegrad? Was ist der § 37.3 Beratungseinsatz?",
+      "Medicum ist als ambulanter Pflegedienst in Hanau berechtigt, die gesetzlich vorgeschriebene Pflegeberatung nach § 37 Abs. 3 SGB XI durchzuführen. Wir sortieren alle Fragen gemeinsam mit Ihnen – verständlich, in Ruhe und ohne Fachchinesisch.",
     ],
     sections: [
       {
+        heading: "Pflegeberatungseinsatz nach § 37 Abs. 3 SGB XI",
+        body: "Wenn Sie Pflegegeld beziehen (ab Pflegegrad 2), sind Sie gesetzlich verpflichtet, regelmäßig einen Beratungseinsatz bei einem zugelassenen Pflegedienst abzurufen. Diese Pflicht ergibt sich aus § 37 Abs. 3 des Sozialgesetzbuches XI (SGB XI). Medicum führt diese Beratungseinsätze in Hanau durch und rechnet sie direkt mit Ihrer Pflegekasse ab. Die Häufigkeit ist gesetzlich festgelegt: Pflegegrad 2 und 3 alle sechs Monate, Pflegegrad 4 und 5 alle drei Monate.",
+      },
+      {
+        heading: "Pflegegrade 1 bis 5 – Was steht Ihnen zu?",
+        bullets: [
+          "Pflegegrad 1: Geringe Beeinträchtigung – Entlastungsbetrag 125 €/Monat (§ 45b SGB XI)",
+          "Pflegegrad 2: Erhebliche Beeinträchtigung – Pflegegeld 332 €/Monat, Sachleistungen bis 761 €/Monat",
+          "Pflegegrad 3: Schwere Beeinträchtigung – Pflegegeld 572 €/Monat, Sachleistungen bis 1.432 €/Monat",
+          "Pflegegrad 4: Schwerste Beeinträchtigung – Pflegegeld 764 €/Monat, Sachleistungen bis 1.778 €/Monat",
+          "Pflegegrad 5: Schwerste Beeinträchtigung mit besonderem Bedarf – Pflegegeld 946 €/Monat, Sachleistungen bis 2.200 €/Monat",
+        ],
+      },
+      {
+        heading: "Entlastungsbetrag nach § 45b SGB XI – 125 € pro Monat",
+        body: "Menschen mit anerkanntem Pflegegrad haben Anspruch auf den Entlastungsbetrag in Höhe von 125 € pro Monat (§ 45b SGB XI). Dieser Betrag kann für Haushaltshilfe, Betreuung, Alltagsbegleitung und andere Entlastungsleistungen genutzt werden, die von anerkannten Pflegediensten wie Medicum erbracht werden. Nicht genutzter Betrag kann bis zu zwölf Monate übertragen werden.",
+      },
+      {
         heading: "Worüber wir Sie beraten",
         bullets: [
-          "Klärung von Kostenübernahmen",
-          "Anpassung des Wohnraums an den Pflegebedarf",
-          "Geeignete Hilfsmittel für den Alltag",
+          "§ 37.3 SGB XI Beratungseinsatz – gesetzliche Pflichtberatung bei Pflegegeldbezug",
+          "Beantragung eines Pflegegrades (Pflegegrad 1 bis 5) bei der Pflegekasse",
+          "Entlastungsbetrag § 45b SGB XI (125 €/Monat) – Abrechnung und Nutzung",
+          "Häusliche Krankenpflege (HKP) nach SGB V – Verordnung Muster 12 durch Ihren Arzt",
+          "Verhinderungspflege – Kostenübernahme bis zu 1.612 € pro Jahr",
+          "Anpassung des Wohnraums an den Pflegebedarf (Zuschüsse bis 4.000 €)",
+          "Geeignete Hilfsmittel für den Alltag – Antrag bei der Pflegekasse",
           "Rezept- und Medikamentenmanagement",
-          "Unterstützung bei der Beantragung eines Pflegegrades",
-          "Vermittlung weiterer Unterstützungsangebote",
+          "Vermittlung weiterer Unterstützungsangebote in Hanau und Umgebung",
         ],
       },
       {
@@ -428,22 +449,37 @@ export const services: Service[] = [
       },
     ],
     audience:
-      "Für pflegebedürftige Menschen und ihre Angehörigen, die sich einen Überblick verschaffen und die nächsten Schritte planen möchten.",
+      "Für pflegebedürftige Menschen und ihre Angehörigen in Hanau, die Pflegegeld beziehen und den gesetzlich vorgeschriebenen Beratungseinsatz (§ 37.3 SGB XI) benötigen, oder die sich einen Überblick über Pflegeleistungen, Kostenübernahme und Pflegegrade verschaffen möchten.",
     faqs: [
       {
-        question: "Bietet Medicum eine Pflegeberatung an?",
+        question: "Was ist der Pflegeberatungseinsatz nach § 37 Abs. 3 SGB XI?",
         answer:
-          "Ja. Wir beraten zu Kostenübernahmen, zur Anpassung des Wohnraums, zu geeigneten Hilfsmitteln und zum Rezept- und Medikamentenmanagement. Außerdem unterstützen wir bei der Beantragung eines Pflegegrades und vermitteln bei Bedarf weitere Unterstützungsangebote.",
+          "Der Pflegeberatungseinsatz nach § 37 Abs. 3 SGB XI ist ein gesetzlich vorgeschriebener Beratungsbesuch, den Personen mit Pflegegrad 2–5, die Pflegegeld beziehen, regelmäßig bei einem zugelassenen Pflegedienst abrufen müssen. Bei Pflegegrad 2 und 3 ist dieser Besuch alle sechs Monate Pflicht, bei Pflegegrad 4 und 5 alle drei Monate. Medicum führt diese Beratungseinsätze in Hanau durch und rechnet sie direkt mit der Pflegekasse ab.",
+      },
+      {
+        question: "Bietet Medicum Pflegeberatung nach § 37.3 SGB XI in Hanau an?",
+        answer:
+          "Ja. Medicum Pflegedienst Hanau ist berechtigt, Pflegeberatungseinsätze nach § 37 Abs. 3 SGB XI durchzuführen und direkt mit Ihrer Pflegekasse abzurechnen. Rufen Sie uns an unter 06181 49 84 570, um einen Beratungstermin zu vereinbaren.",
+      },
+      {
+        question: "Was ist der Entlastungsbetrag nach § 45b SGB XI?",
+        answer:
+          "Der Entlastungsbetrag nach § 45b SGB XI beträgt 125 € pro Monat und steht allen Personen mit anerkanntem Pflegegrad (1–5) zu. Er kann für Haushaltshilfe, Betreuung, Alltagsbegleitung und andere Entlastungsleistungen bei anerkannten Anbietern wie Medicum genutzt werden. Nicht genutzter Betrag kann bis zu zwölf Monate in das nächste Kalenderjahr übertragen werden.",
+      },
+      {
+        question: "Wie beantragt man einen Pflegegrad?",
+        answer:
+          "Den Antrag auf einen Pflegegrad stellen Sie bei Ihrer Pflegekasse (dem Pflegeanteil Ihrer Krankenkasse). Nach dem Antrag schickt der Medizinische Dienst (MD) eine Gutachterin oder einen Gutachter zur Begutachtung. Medicum unterstützt Sie bei der Vorbereitung auf diese Begutachtung und erklärt, welche Unterlagen sinnvoll sind.",
       },
       {
         question: "Unterstützt Medicum bei der Beantragung eines Pflegegrades?",
         answer:
-          "Ja. Wir unterstützen Sie bei der Beantragung eines Pflegegrades und erklären, welche Schritte und Unterlagen dafür nötig sind. Die Entscheidung über die Einstufung trifft die Pflegekasse nach einer Begutachtung – eine Bewilligung können wir deshalb nicht zusichern.",
+          "Ja. Wir unterstützen Sie bei der Beantragung eines Pflegegrades und erklären, welche Schritte und Unterlagen dafür nötig sind. Die Entscheidung über die Einstufung trifft die Pflegekasse nach einer Begutachtung durch den Medizinischen Dienst – eine Bewilligung können wir deshalb nicht zusichern.",
       },
       {
-        question: "Was kostet ein Beratungsgespräch?",
+        question: "Was kostet die Pflegeberatung bei Medicum?",
         answer:
-          "Sprechen Sie uns dazu bitte direkt an. Welche Leistungen abgerechnet werden können und welche Voraussetzungen dafür gelten, hängt vom Einzelfall und von Ihrer Kasse ab. Wir klären das transparent mit Ihnen, bevor eine Leistung beginnt.",
+          "Der gesetzlich vorgeschriebene Beratungseinsatz nach § 37.3 SGB XI wird direkt mit Ihrer Pflegekasse abgerechnet – für Sie entstehen in der Regel keine Kosten. Für weitere Beratungsleistungen sprechen Sie uns bitte direkt an. Wir klären das transparent mit Ihnen, bevor eine Leistung beginnt.",
       },
     ],
     related: ["verhinderungspflege", "behandlungspflege", "betreuung"],

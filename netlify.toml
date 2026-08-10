@@ -1,0 +1,24 @@
+[build]
+  command = "npm run build"
+  publish = ".output/public"
+
+# Nitro will detect Netlify environment and build the SSR functions into .netlify/functions-internal
+# If for some reason the output is just a static site (SPA mode), it will build into dist.
+# For TanStack Start, the publish folder is typically .output/public (default Nitro output for static assets)
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

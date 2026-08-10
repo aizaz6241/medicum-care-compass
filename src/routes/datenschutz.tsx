@@ -10,6 +10,7 @@ export const Route = createFileRoute("/datenschutz")({
       description:
         "Informationen zum Datenschutz bei Medicum in Hanau: Umgang mit Kontaktanfragen, eingesetzte Dienste und Ihre Rechte nach der DSGVO.",
       path: "/datenschutz",
+      noindex: true,
     }),
   }),
   component: DatenschutzPage,

@@ -17,7 +17,7 @@ import { MobileContactBar } from "@/components/site/MobileContactBar";
 import { LanguageNotice } from "@/components/site/LanguageNotice";
 import { LanguageProvider } from "@/i18n/language-context";
 import { company } from "@/data/company";
-import { jsonLd, localBusinessSchema, websiteSchema } from "@/lib/seo";
+import { jsonLd, localBusinessSchema, websiteSchema, speakableSchema, SITE_URL } from "@/lib/seo";
 
 function NotFoundComponent() {
   return (
@@ -103,8 +103,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Medicum ist ein ambulanter Pflegedienst in Hanau: Behandlungspflege, Grundpflege, Betreuung und Pflegeberatung – menschlich, individuell und mehrsprachig.",
       },
-      { name: "author", content: "Medicum" },
+      { name: "author", content: "Medicum – Ambulanter Pflegedienst Hanau" },
       { name: "theme-color", content: "#07B190" },
+      // Global crawl directive — max-snippet:-1 is critical for AEO (Featured Snippets) & GEO (AI RAG engines)
+      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Medicum – Ambulanter Pflegedienst in Hanau" },
       { property: "og:locale", content: "de_DE" },
@@ -114,6 +116,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      // hreflang — tells Google/Bing which language version to serve to which users
+      { rel: "alternate", hrefLang: "de", href: SITE_URL },
+      { rel: "alternate", hrefLang: "x-default", href: SITE_URL },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -121,7 +126,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap",
       },
     ],
-    scripts: [jsonLd(localBusinessSchema), jsonLd(websiteSchema)],
+    scripts: [jsonLd(localBusinessSchema), jsonLd(websiteSchema), jsonLd(speakableSchema)],
   }),
   shellComponent: RootShell,
   component: RootComponent,

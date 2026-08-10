@@ -9,6 +9,7 @@ export const Route = createFileRoute("/impressum")({
       title: "Impressum | Medicum Pflegedienst Hanau",
       description: `Impressum und Anbieterkennzeichnung von Medicum, ${fullAddress}. Telefon ${company.phone}, E-Mail ${company.email}.`,
       path: "/impressum",
+      noindex: true,
     }),
   }),
   component: ImpressumPage,

@@ -15,9 +15,9 @@ const crumbs = [
 export const Route = createFileRoute("/ueber-uns")({
   head: () => ({
     ...buildHead({
-      title: "Über uns – Leitbild und Haltung | Medicum Hanau",
+      title: "Über Medicum – Ihr ambulanter Pflegedienst in Hanau",
       description:
-        "Medicum in Hanau pflegt ganzheitlich: mit Respekt vor persönlichen Gewohnheiten, individuellen Werten sowie kulturellen und religiösen Prägungen – vorurteilsfrei und qualitätsgesichert.",
+        "Erfahren Sie mehr über Medicum Hanau: Wir pflegen ganzheitlich mit Respekt vor persönlichen Gewohnheiten, Werten sowie kulturellen Prägungen. Lernen Sie unser Team kennen.",
       path: "/ueber-uns",
     }),
     scripts: [jsonLd(breadcrumbSchema(crumbs))],

@@ -4,7 +4,7 @@ import { company, fullAddress } from "@/data/company";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ContactForm } from "@/components/site/ContactForm";
 import { Reveal } from "@/components/site/Reveal";
-import { buildHead, breadcrumbSchema, jsonLd } from "@/lib/seo";
+import { buildHead, breadcrumbSchema, jsonLd, contactPageSchema } from "@/lib/seo";
 
 const crumbs = [
   { name: "Startseite", path: "/" },
@@ -14,11 +14,11 @@ const crumbs = [
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
     ...buildHead({
-      title: "Kontakt & Pflegeberatung anfragen | Medicum Hanau",
-      description: `Medicum, ${fullAddress}. Telefon ${company.phone}, E-Mail ${company.email}. Bürozeiten ${company.officeHoursShort}. Jetzt Pflegeberatung in Hanau anfragen.`,
+      title: "Kontakt & Pflegeberatung anfragen | Medicum Pflegedienst Hanau",
+      description: `Medicum Pflegedienst in ${company.city}. Telefon ${company.phone}, E-Mail ${company.email}. Bürozeiten ${company.officeHoursShort}. Jetzt kostenlose Pflegeberatung in Hanau anfragen.`,
       path: "/kontakt",
     }),
-    scripts: [jsonLd(breadcrumbSchema(crumbs))],
+    scripts: [jsonLd(breadcrumbSchema(crumbs)), jsonLd(contactPageSchema)],
   }),
   component: KontaktPage,
 });

@@ -14,9 +14,9 @@ const crumbs = [
 export const Route = createFileRoute("/leistungen/")({
   head: () => ({
     ...buildHead({
-      title: "Leistungen im Überblick | Medicum Pflegedienst Hanau",
+      title: "Pflegeleistungen im Überblick | Medicum Pflegedienst Hanau",
       description:
-        "Alle Leistungen von Medicum in Hanau: Behandlungspflege, Grundpflege, Körperpflege, Ernährung, Mobilität, Haushaltshilfe, Betreuung, Verhinderungspflege, Pflegeberatung und Sterbebegleitung.",
+        "Alle Leistungen des Medicum Pflegedienstes in Hanau: Behandlungspflege, Grundpflege, Körperpflege, Ernährung, Mobilität, Haushaltshilfe, Betreuung und Pflegeberatung.",
       path: "/leistungen",
     }),
     scripts: [jsonLd(breadcrumbSchema(crumbs))],
