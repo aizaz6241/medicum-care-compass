@@ -10,15 +10,17 @@ import { cn } from "@/lib/utils";
 
 const mainNav: {
   label: string;
-  to: "/" | "/ueber-uns" | "/leistungen" | "/leistungen/pflegeberatung" | "/kontakt";
+  to: "/" | "/ueber-uns" | "/leistungen" | "/leistungen/$slug" | "/kontakt";
+  params?: { slug: string };
   hasMenu?: boolean;
 }[] = [
   { label: "Startseite", to: "/" },
   { label: "Über uns", to: "/ueber-uns" },
   { label: "Leistungen", to: "/leistungen", hasMenu: true },
-  { label: "Pflegeberatung", to: "/leistungen/pflegeberatung" },
+  { label: "Pflegeberatung", to: "/leistungen/$slug", params: { slug: "pflegeberatung" } },
   { label: "Kontakt", to: "/kontakt" },
 ];
+
 
 
 const linkClass =
