@@ -127,25 +127,28 @@ function HomePage() {
             </a>
           </div>
 
-          <div className="relative">
-            <div className="overflow-hidden rounded-3xl shadow-lift">
-              <img
-                src={heroImage}
-                width={1600}
-                height={1200}
-                fetchPriority="high"
-                decoding="async"
-                alt="Pflegefachkraft von Medicum im Gespräch mit einer älteren Frau in deren Wohnzimmer in Hanau"
-                className="h-full w-full object-cover"
-              />
+          <Parallax3D className="relative" strength={7} depth={14}>
+            <div className="relative">
+              <div className="overflow-hidden rounded-3xl shadow-lift">
+                <img
+                  src={heroImage}
+                  width={1600}
+                  height={1200}
+                  fetchPriority="high"
+                  decoding="async"
+                  alt="Pflegefachkraft von Medicum im Gespräch mit einer älteren Frau in deren Wohnzimmer in Hanau"
+                  className="h-full w-full scale-105 object-cover transition-transform duration-700 ease-out"
+                />
+              </div>
+              <div className="mt-4 rounded-2xl border border-border bg-card p-5 shadow-soft sm:absolute sm:-bottom-8 sm:-left-6 sm:mt-0 sm:max-w-xs">
+                <p className="font-display font-bold text-primary">Wir kümmern uns.</p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Pflege, die sich an Ihrem Alltag orientiert – nicht umgekehrt.
+                </p>
+              </div>
             </div>
-            <div className="mt-4 rounded-2xl border border-border bg-card p-5 shadow-soft sm:absolute sm:-bottom-8 sm:-left-6 sm:mt-0 sm:max-w-xs">
-              <p className="font-display font-bold text-primary">Wir kümmern uns.</p>
-              <p className="mt-1 text-sm text-muted-foreground">
-                Pflege, die sich an Ihrem Alltag orientiert – nicht umgekehrt.
-              </p>
-            </div>
-          </div>
+          </Parallax3D>
+
         </div>
 
         {/* Vertrauensleiste */}
