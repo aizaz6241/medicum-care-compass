@@ -62,7 +62,7 @@ export function Header() {
           {mainNav.map((item) =>
             item.hasMenu ? (
               <div
-                key={item.to}
+                key={item.label}
                 className="relative"
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
@@ -115,8 +115,9 @@ export function Header() {
               </div>
             ) : (
               <Link
-                key={item.to}
+                key={item.label}
                 to={item.to}
+                params={item.params as never}
                 className={linkClass}
                 activeOptions={{ exact: item.to === "/" }}
               >
@@ -171,9 +172,10 @@ export function Header() {
               {mainNav
                 .filter((i) => !i.hasMenu)
                 .map((item) => (
-                  <li key={item.to}>
+                  <li key={item.label}>
                     <Link
                       to={item.to}
+                      params={item.params as never}
                       onClick={() => setMobileOpen(false)}
                       activeOptions={{ exact: item.to === "/" }}
                       className="flex min-h-12 items-center rounded-xl px-3 text-lg font-medium text-foreground data-[status=active]:bg-primary-soft data-[status=active]:text-primary"
