@@ -18,6 +18,7 @@ import { LanguageNotice } from "@/components/site/LanguageNotice";
 import { LanguageProvider } from "@/i18n/language-context";
 import { company } from "@/data/company";
 import { jsonLd, localBusinessSchema, websiteSchema, speakableSchema, SITE_URL } from "@/lib/seo";
+import { BotpressChat } from "@/components/site/BotpressChat";
 
 function NotFoundComponent() {
   return (
@@ -147,8 +148,6 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         {children}
         <Scripts />
-        <script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
-        <script src="https://files.bpcontent.cloud/2026/08/10/17/20260810173615-SF19BEOA.js" defer></script>
       </body>
     </html>
   );
@@ -170,6 +169,7 @@ function RootComponent() {
         </main>
         <Footer />
         <MobileContactBar />
+        <BotpressChat />
       </LanguageProvider>
     </QueryClientProvider>
   );
