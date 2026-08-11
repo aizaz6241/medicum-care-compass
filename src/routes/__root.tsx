@@ -130,8 +130,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       jsonLd(localBusinessSchema),
       jsonLd(websiteSchema),
       jsonLd(speakableSchema),
-      { src: "https://cdn.botpress.cloud/webchat/v5.0/inject.js" },
-      { src: "https://files.bpcontent.cloud/2026/08/10/17/20260810173615-SF19BEOA.js", defer: true },
     ],
   }),
   shellComponent: RootShell,
@@ -149,6 +147,8 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         {children}
         <Scripts />
+        <script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
+        <script src="https://files.bpcontent.cloud/2026/08/10/17/20260810173615-SF19BEOA.js" defer></script>
       </body>
     </html>
   );
