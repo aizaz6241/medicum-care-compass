@@ -2,11 +2,11 @@ import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { _ as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
 import { P as ArrowRight, j as Check, l as Phone } from "../_libs/lucide-react.mjs";
 import { t as Breadcrumbs } from "./Breadcrumbs-BZRHlxZw.mjs";
-import { d as services, f as company, n as Route, s as cn, u as serviceIcons } from "./router-D9WlpxzW.mjs";
-import { t as Reveal } from "./Reveal-Cppm1T_U.mjs";
-import { t as CtaBand } from "./CtaBand-YGPqfYAz.mjs";
-import { t as FaqSection } from "./FaqSection-CcpcwFAQ.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/leistungen._slug-Db4drvUc.js
+import { d as services, f as company, n as Route, s as cn, u as serviceIcons } from "./router-CUExU-96.mjs";
+import { t as Reveal } from "./Reveal-ZwHUfir2.mjs";
+import { t as CtaBand } from "./CtaBand-CIp-MhE3.mjs";
+import { t as FaqSection } from "./FaqSection-_JEHMoCe.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/leistungen._slug-BXN98yDL.js
 var import_jsx_runtime = require_jsx_runtime();
 function ServiceDetailPage() {
 	const { service } = Route.useLoaderData();

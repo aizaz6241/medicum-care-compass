@@ -1,7 +1,7 @@
 import { _ as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
-import { m as languages } from "./router-D9WlpxzW.mjs";
-import { t as Reveal } from "./Reveal-Cppm1T_U.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/LanguagesSection-Bdq0Iko-.js
+import { m as languages } from "./router-CUExU-96.mjs";
+import { t as Reveal } from "./Reveal-ZwHUfir2.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/LanguagesSection-DwYD0ld_.js
 var import_jsx_runtime = require_jsx_runtime();
 var team_medicum_default = "/assets/team-medicum-fUAqcf4_.jpg";
 /** Sprachangebot laut Broschüre – bewusst als Unternehmensangebot formuliert. */

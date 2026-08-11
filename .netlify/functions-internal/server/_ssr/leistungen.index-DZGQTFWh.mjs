@@ -1,10 +1,10 @@
 import { _ as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
 import { t as Breadcrumbs } from "./Breadcrumbs-BZRHlxZw.mjs";
-import { d as services, r as crumbs } from "./router-D9WlpxzW.mjs";
-import { t as Reveal } from "./Reveal-Cppm1T_U.mjs";
-import { t as CtaBand } from "./CtaBand-YGPqfYAz.mjs";
+import { d as services, r as crumbs } from "./router-CUExU-96.mjs";
+import { t as Reveal } from "./Reveal-ZwHUfir2.mjs";
+import { t as CtaBand } from "./CtaBand-CIp-MhE3.mjs";
 import { t as ServiceCard } from "./ServiceCard--xjiLv-g.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/leistungen.index-Dtb_DeMD.js
+//#region node_modules/.nitro/vite/services/ssr/assets/leistungen.index-DZGQTFWh.js
 var import_jsx_runtime = require_jsx_runtime();
 function LeistungenPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [

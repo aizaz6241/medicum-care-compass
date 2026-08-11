@@ -1,9 +1,9 @@
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { _ as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
 import { h as Mail, l as Phone } from "../_libs/lucide-react.mjs";
-import { f as company, s as cn } from "./router-D9WlpxzW.mjs";
-import { t as Reveal } from "./Reveal-Cppm1T_U.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/CtaBand-YGPqfYAz.js
+import { f as company, s as cn } from "./router-CUExU-96.mjs";
+import { t as Reveal } from "./Reveal-ZwHUfir2.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/CtaBand-CIp-MhE3.js
 var import_jsx_runtime = require_jsx_runtime();
 /** Wiederverwendbarer Handlungsaufruf-Block. */
 function CtaBand({ title = "Sprechen wir über Ihre Situation", text = "In einem persönlichen Gespräch klären wir in Ruhe, welche Unterstützung zu Ihnen passt – unverbindlich und verständlich.", primaryLabel = "Pflegeberatung anfragen", tone = "primary" }) {

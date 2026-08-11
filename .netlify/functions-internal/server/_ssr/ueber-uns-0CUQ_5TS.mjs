@@ -2,11 +2,11 @@ import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { _ as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
 import { j as Check, o as ShieldCheck } from "../_libs/lucide-react.mjs";
 import { t as Breadcrumbs } from "./Breadcrumbs-BZRHlxZw.mjs";
-import { i as crumbs$1 } from "./router-D9WlpxzW.mjs";
-import { t as Reveal } from "./Reveal-Cppm1T_U.mjs";
-import { t as CtaBand } from "./CtaBand-YGPqfYAz.mjs";
-import { n as team_medicum_default, t as LanguagesSection } from "./LanguagesSection-Bdq0Iko-.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/ueber-uns-JWYd3VfI.js
+import { i as crumbs$1 } from "./router-CUExU-96.mjs";
+import { t as Reveal } from "./Reveal-ZwHUfir2.mjs";
+import { t as CtaBand } from "./CtaBand-CIp-MhE3.mjs";
+import { n as team_medicum_default, t as LanguagesSection } from "./LanguagesSection-DwYD0ld_.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/ueber-uns-0CUQ_5TS.js
 var import_jsx_runtime = require_jsx_runtime();
 var werte = [
 	{

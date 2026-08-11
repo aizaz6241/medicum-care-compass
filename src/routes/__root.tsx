@@ -116,7 +116,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
       // hreflang — tells Google/Bing which language version to serve to which users
       { rel: "alternate", hrefLang: "de", href: SITE_URL },
       { rel: "alternate", hrefLang: "x-default", href: SITE_URL },

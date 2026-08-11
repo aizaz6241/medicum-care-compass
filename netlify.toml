@@ -5,13 +5,11 @@
 
 [build.environment]
   NODE_VERSION = "22"
+  AWS_LAMBDA_JS_RUNTIME = "nodejs22.x"
   NPM_FLAGS = "--legacy-peer-deps"
   NITRO_PRESET = "netlify"
 
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/server"
-  status = 200
+
 
 # Nitro will detect Netlify environment and build the SSR functions into .netlify/functions-internal
 # If for some reason the output is just a static site (SPA mode), it will build into dist.

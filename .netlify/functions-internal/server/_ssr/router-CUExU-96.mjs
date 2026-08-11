@@ -2,7 +2,7 @@ import { r as __toESM } from "../_runtime.mjs";
 import { u as require_react } from "../_libs/@floating-ui/react-dom+[...].mjs";
 import { c as HeadContent, d as Outlet, f as lazyRouteComponent, g as useRouter, h as Link, j as notFound, m as createRootRouteWithContext, p as createFileRoute, s as Scripts, u as createRouter } from "../_libs/@tanstack/react-router+[...].mjs";
 import { _ as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
-import { i as __exportAll } from "./server-6c7O8yLE.mjs";
+import { r as __exportAll } from "./server-DodVHjpM.mjs";
 import { A as ChevronDown, C as Flower2, D as Circle, E as Clock, M as CalendarClock, S as Footprints, T as Droplets, b as HandHeart, c as Printer, d as MessageSquare, f as MessageCircle, h as Mail, i as Stethoscope, j as Check, k as ChevronRight, l as Phone, m as MapPin, n as Utensils, p as Menu, r as Users, t as X, v as House, x as Globe } from "../_libs/lucide-react.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
 import { t as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
@@ -518,10 +518,10 @@ var serviceIcons = {
 	flower: Flower2
 };
 //#endregion
-//#region node_modules/.nitro/vite/services/ssr/assets/router-D9WlpxzW.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-CUExU-96.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-CQJe_CnD.css";
+var styles_default = "/assets/styles-PEciiEIT.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {
@@ -1517,6 +1517,22 @@ var jsonLd = (data) => ({
 	children: JSON.stringify(data)
 });
 `${company.name}${fullAddress}`;
+function BotpressChat() {
+	(0, import_react.useEffect)(() => {
+		const script1 = document.createElement("script");
+		script1.src = "https://cdn.botpress.cloud/webchat/v5.0/inject.js";
+		script1.async = true;
+		script1.onload = () => {
+			const script2 = document.createElement("script");
+			script2.src = "https://files.bpcontent.cloud/2026/08/10/17/20260810173615-SF19BEOA.js";
+			script2.defer = true;
+			document.body.appendChild(script2);
+		};
+		document.body.appendChild(script1);
+		return () => {};
+	}, []);
+	return null;
+}
 function NotFoundComponent() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 		className: "flex min-h-[70vh] items-center justify-center px-4 py-24",
@@ -1692,12 +1708,7 @@ var Route$8 = createRootRouteWithContext()({
 		scripts: [
 			jsonLd(localBusinessSchema),
 			jsonLd(websiteSchema),
-			jsonLd(speakableSchema),
-			{ src: "https://cdn.botpress.cloud/webchat/v5.0/inject.js" },
-			{
-				src: "https://files.bpcontent.cloud/2026/08/10/17/20260810173615-SF19BEOA.js",
-				defer: true
-			}
+			jsonLd(speakableSchema)
 		]
 	}),
 	shellComponent: RootShell,
@@ -1729,7 +1740,8 @@ function RootComponent() {
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MobileContactBar, {})
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MobileContactBar, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BotpressChat, {})
 		] })
 	});
 }
@@ -1759,7 +1771,7 @@ var homeFaqs = [
 		answer: "Ja. Medicum ist von allen Krankenkassen zugelassen. Welche Leistungen in Ihrem Fall abgerechnet werden können, hängt von der ärztlichen Verordnung beziehungsweise von Ihrem Pflegegrad ab. Wir erklären Ihnen die Möglichkeiten in unserer Pflegeberatung."
 	}
 ];
-var $$splitComponentImporter$6 = () => import("./routes-DOPKlIbv.mjs");
+var $$splitComponentImporter$6 = () => import("./routes-DFrnywas.mjs");
 var Route$7 = createFileRoute("/")({
 	head: () => ({
 		...buildHead({
@@ -1798,7 +1810,7 @@ var crumbs$2 = [{
 	name: "Kontakt",
 	path: "/kontakt"
 }];
-var $$splitComponentImporter$3 = () => import("./kontakt-M8eU1wKI.mjs");
+var $$splitComponentImporter$3 = () => import("./kontakt-LSS9ZPqr.mjs");
 var Route$4 = createFileRoute("/kontakt")({
 	head: () => ({
 		...buildHead({
@@ -1878,7 +1890,7 @@ var crumbs$1 = [{
 	name: "Über uns",
 	path: "/ueber-uns"
 }];
-var $$splitComponentImporter$2 = () => import("./ueber-uns-JWYd3VfI.mjs");
+var $$splitComponentImporter$2 = () => import("./ueber-uns-0CUQ_5TS.mjs");
 var Route$2 = createFileRoute("/ueber-uns")({
 	head: () => ({
 		...buildHead({
@@ -1897,7 +1909,7 @@ var crumbs = [{
 	name: "Leistungen",
 	path: "/leistungen"
 }];
-var $$splitComponentImporter$1 = () => import("./leistungen.index-Dtb_DeMD.mjs");
+var $$splitComponentImporter$1 = () => import("./leistungen.index-DZGQTFWh.mjs");
 var Route$1 = createFileRoute("/leistungen/")({
 	head: () => ({
 		...buildHead({
@@ -1909,7 +1921,7 @@ var Route$1 = createFileRoute("/leistungen/")({
 	}),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-var $$splitComponentImporter = () => import("./leistungen._slug-Db4drvUc.mjs");
+var $$splitComponentImporter = () => import("./leistungen._slug-BXN98yDL.mjs");
 var Route = createFileRoute("/leistungen/$slug")({
 	loader: ({ params }) => {
 		const service = serviceBySlug(params.slug);
