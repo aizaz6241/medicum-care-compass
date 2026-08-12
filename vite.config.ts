@@ -4,4 +4,8 @@ export default defineConfig({
   nitro: {
     preset: "netlify",
   },
+  tanstackStart: {
+    // Use the built-in TanStack Start server entry (not our custom src/server.ts)
+    // src/server.ts wraps a virtual module that only works in Vite context, not Netlify Lambda
+  },
 });
