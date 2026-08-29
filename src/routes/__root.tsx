@@ -111,12 +111,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Medicum – Ambulanter Pflegedienst in Hanau" },
       { property: "og:locale", content: "de_DE" },
+      { property: "og:image", content: `${SITE_URL}/logo.png` },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: `${SITE_URL}/logo.png` },
       { name: "format-detection", content: "telephone=yes" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "shortcut icon", href: "/favicon.ico" },
+      { rel: "apple-touch-icon", href: "/favicon.png" },
       // hreflang — tells Google/Bing which language version to serve to which users
       { rel: "alternate", hrefLang: "de", href: SITE_URL },
       { rel: "alternate", hrefLang: "x-default", href: SITE_URL },

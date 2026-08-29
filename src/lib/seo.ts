@@ -86,9 +86,9 @@ export const localBusinessSchema = {
   url: SITE_URL,
   logo: {
     "@type": "ImageObject",
-    url: absoluteUrl("/favicon.ico"),
-    width: 64,
-    height: 64,
+    url: absoluteUrl("/logo.png"),
+    width: 512,
+    height: 512,
   },
   image: [
     absoluteUrl("/assets/team-medicum.jpg"),
