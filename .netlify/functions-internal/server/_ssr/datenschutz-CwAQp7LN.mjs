@@ -1,6 +1,6 @@
 import { _ as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
 import { t as Breadcrumbs } from "./Breadcrumbs-BZRHlxZw.mjs";
-import { f as company, p as fullAddress } from "./router-BEwygiXH.mjs";
+import { f as company, p as fullAddress } from "./router-04wpNHcP.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/datenschutz-CwAQp7LN.js
 var import_jsx_runtime = require_jsx_runtime();
 function DatenschutzPage() {
