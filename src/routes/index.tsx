@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BadgeCheck, HeartHandshake, Languages, Phone, Check } from "lucide-react";
-import heroImage from "@/assets/hero-pflege.jpg";
-import teamImage from "@/assets/team-medicum.jpg";
+import heroImage from "@/assets/pflege-herz-handschuhe.png";
+import careImage from "@/assets/pflege-haende-fuersorge.jpg";
 import { company } from "@/data/company";
 import { services, featuredServiceSlugs, serviceBySlug, type Faq } from "@/data/services";
 import { ServiceCard } from "@/components/site/ServiceCard";
@@ -139,11 +139,11 @@ function HomePage() {
               <div className="overflow-hidden rounded-3xl shadow-lift">
                 <img
                   src={heroImage}
-                  width={1600}
-                  height={1200}
+                  width={1024}
+                  height={576}
                   fetchPriority="high"
                   decoding="async"
-                  alt="Pflegefachkraft von Medicum im Gespräch mit einer älteren Frau in deren Wohnzimmer in Hanau"
+                  alt="Medizinisches Pflegefachpersonal von Medicum formt mit Handschuhen ein Herz als Symbol für professionelle und herzliche Pflege in Hanau"
                   className="h-full w-full scale-105 object-cover transition-transform duration-700 ease-out"
                 />
               </div>
@@ -213,12 +213,12 @@ function HomePage() {
           <Reveal>
             <div className="overflow-hidden rounded-3xl shadow-lift">
               <img
-                src={teamImage}
-                width={1408}
-                height={1008}
+                src={careImage}
+                width={768}
+                height={1024}
                 loading="lazy"
                 decoding="async"
-                alt="Drei Pflegekräfte von Medicum im Gespräch im Flur einer Wohnung"
+                alt="Einfühlsame Pflege und persönliche Zuwendung bei Medicum Pflegedienst in Hanau"
                 className="h-full w-full object-cover"
               />
             </div>

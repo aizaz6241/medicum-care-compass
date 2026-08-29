@@ -1,6 +1,6 @@
 import { _ as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
 import { t as Breadcrumbs } from "./Breadcrumbs-BZRHlxZw.mjs";
-import { f as company } from "./router-DGMNgbRs.mjs";
+import { f as company } from "./router-BEwygiXH.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/impressum-DjtpdGH9.js
 var import_jsx_runtime = require_jsx_runtime();
 function ImpressumPage() {
