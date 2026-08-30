@@ -31,5 +31,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# Local Netlify folder
+# Local Netlify and Vercel folders
 .netlify
+.vercel
